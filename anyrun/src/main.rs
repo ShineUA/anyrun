@@ -418,10 +418,11 @@ fn activate(app: &gtk::Application, runtime_data: Rc<RefCell<RuntimeData>>) {
                 .hexpand(true)
                 .build();
 
-            plugin_box.add(&list);
+            //plugin_box.add(&list);
 
             let row = gtk::ListBoxRow::builder().name(style_names::PLUGIN).build();
-            row.add(&plugin_box);
+            // row.add(&plugin_box);
+            row.add(&list);
 
             main_list.add(&row);
 
